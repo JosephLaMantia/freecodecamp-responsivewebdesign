@@ -1,3 +1,28 @@
 body {
     background-color: #f6e706;
   }
+
+  #header {
+    display: flex;
+  }
+
+  #header-img {
+    align-self: center;
+  }
+
+  hr {
+    border-color: black;
+  }
+
+  @media (max-width: 650px){
+    #header {
+      flex-direction: column;
+      align-items: center;
+    }
+    #nav-bar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      
+    }
+  }
