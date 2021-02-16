@@ -2,10 +2,17 @@
 body {
     background: url('https://cutewallpaper.org/21/aesthetic-anime-desktop-wallpaper/1920x1080-Photo-Background-Elkgroveses.com.jpg');
     background-size: cover;
-    background-position: fixed;
+    background-attachment: fixed;
     margin-top: 40px;
     font-family: sans-serif;
     padding-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
 }
 
 /* navbar styles */
@@ -42,19 +49,33 @@ header li a {
 
 /* welcome styles */
 #welcome-section {
+    display: flex;
+    justify-content: left;
     margin: auto;
-    margin-top: 10%;
-    width: 50%;
-    height: 12em;
+    margin-top: 10em;
+    width: 60em;
+    height: 100vh;
+    /* height: 20em; */
     background-color:rgb(255, 255, 255, 0.97);
-    display:flex;
-    flex-direction: column;
     box-shadow: 0 0 25px 0 black;
 }
 
+#welcome-text-wrapper {
+    display:flex;
+    flex-direction: column;
+    padding-left: 7em;
+}
+
+#welcome-section img {
+    height: auto;
+    width: auto;
+}
+
+
+
 #welcome-section h1 {
     text-align: center;
-    padding-top: 1.5em;
+    padding-top: 3.5em;
     padding-right: 20%;
     margin-bottom:0;
     font-family: monospace;
@@ -62,7 +83,8 @@ header li a {
 }
 
 #welcome-section h2 {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 1em;
     text-align: center;
     padding-left: 10%;
     font-family: monospace;
@@ -76,7 +98,120 @@ header li a {
 }
 
 /* projects styles */
+
+#projects {
+    margin-top: 30em;
+    width: 100%;
+    background-color:rgb(255, 255, 255, 0.75);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 25px 0 black;
+    font-family: monospace;
+}
+
+#projects h1 {
+    padding-top:1em;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Major Mono Display', monospace;
+    word-spacing: -10px;
+}
+
+#project-tile-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 0 black;
+    font-size: 1.2em;
+    padding: 2em;
+    margin: 1em;
+    width: 50em;
+}
+
+.project-tile a{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+}
+
+.project-tile a:hover{
+    color: #2d47a8;
+}
+
+.project-link {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 2em !important;
+    color: black;
+    text-decoration: none;
+}
+
+
 .project-img {
     max-height: 200px;
     max-width: 400px;
+    box-shadow: 0 0 2px 0 #2d47a8;
+    margin: 1em;
+}
+
+.repo-link-wrapper {
+    display: inline;
+}
+
+.repo-link {
+    text-decoration: underline !important;
+}
+
+/* footer */
+
+footer {
+    bottom: 0;
+    margin-top: 6em;
+    padding-top: 5px;
+    height: 8em;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    box-shadow: 0 0 5px 0 black;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.5em;
+    padding-bottom: 2em;
+}
+
+footer img {
+    height: 50px;
+    width: 50px;
+}
+
+#contact-link-wrapper {
+    font-family: monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#contact-link-wrapper a {
+    color: black;
+    text-decoration: none;
+}
+
+#contact-link-wrapper a:hover {
+    color: #2d47a8;
+}
+
+/* media query */
+@media (max-width: 960px){
+    body {
+        width: fit-content;
+    }
 }
